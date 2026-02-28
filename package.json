@@ -10,10 +10,14 @@
     "tailwind:init": "tailwindcss init -p"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
+    "@next/font": "^14.2.15",
     "@tailwindcss/vite": "^4.2.1",
+    "classnames": "^2.5.1",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-masonry-css": "^1.0.16"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
