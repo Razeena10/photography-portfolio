@@ -14,6 +14,7 @@
     "@next/font": "^14.2.15",
     "@tailwindcss/vite": "^4.2.1",
     "classnames": "^2.5.1",
+    "lightgallery": "^2.9.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
