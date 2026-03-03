@@ -32,6 +32,7 @@ const expletusSans = Expletus_Sans({
 export default function Home() {
   const [oceanPhotos, setOceanPhotos] = useState<UnsplashPhoto[]>([]);
   const [forestPhotos, setForestPhotos] = useState<UnsplashPhoto[]>([]);
+  const [contactOpen, setContactOpen] = useState(false);
   const lightBoxRef = useRef<LightGallery | null>(null);
 
   useEffect(() => {
@@ -109,7 +110,34 @@ export default function Home() {
       >
         <nav className="flex items-center justify-between max-w-5xl mx-auto">
           <div className="text-white font-bold text-lg">Photography Portfolio</div>
-          <button className="bg-white text-black px-4 py-2 rounded">Get in touch</button>
+          <div className="relative">
+            <button
+              onClick={() => setContactOpen((o) => !o)}
+              className="bg-white text-black px-4 py-2 rounded"
+            >
+              Get in touch
+            </button>
+            {contactOpen && (
+              <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg py-2">
+                <a
+                  href="https://www.linkedin.com/in/md-razeena-nishad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-1 hover:bg-gray-200"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/Razeena10"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-1 hover:bg-gray-200"
+                >
+                  GitHub
+                </a>
+              </div>
+            )}
+          </div>
         </nav>
       </header>
 
